@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
+
+
 @RestController
 public class ProductController 
 {
@@ -23,20 +25,19 @@ public class ProductController
 	
 	@RequestMapping(value = "/postitem", method = RequestMethod.POST)
 	public void postItem(@RequestBody Product item) {
-	// Item(String itemName,String itemDescription, String itemLine, String pathToItemImage, long itemSize,long itemPrice)
-		repository.save(new Product(item.getItemName(), item.getItemDescription(),item.getItemLine(),item.getPathToImage(),item.getItemSize(), item.getItemPrice()));	
+		repository.save(new Product(item.getName(),item.getPrice(),item.getDescription(),item.getSize(),item.getImage(),item.getLine()));	
 	
 	}
 
 	@RequestMapping("/findall")
-	public Response findAll() {
+	public Response findAllItems() {
 
 		Iterable<Product> items = repository.findAll();
 
 		return new Response("Done", items);
 	}
 	
-	@RequestMapping("/findbyname")
+	@RequestMapping("/findname")
 	public Response findByName(@RequestParam("name") String name)
 	{
 
@@ -44,7 +45,7 @@ public class ProductController
 
 		return new Response("Done", items);
 	}
-	@RequestMapping("/item/{id}")
+	@RequestMapping("/product/{id}")
 	public Response findItemById(@PathVariable("id") long id) {
 
 		Product item = repository.findOne(id);

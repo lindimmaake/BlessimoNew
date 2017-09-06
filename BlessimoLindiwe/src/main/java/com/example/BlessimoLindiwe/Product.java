@@ -19,22 +19,22 @@ public class Product implements Serializable
 	private long id;
 	
 	@Column(name="name")
-	private String itemName;
+	private String name;
 	
 	@Column(name ="price")
-	private long itemPrice;
+	private String price;
 	
 	@Column(name ="description")
-	private String itemDescription;
+	private String description;
 	
 	@Column(name= "size")
-	private long itemSize;
+	private String size;
 	
 	@Column(name="image")
-	private String pathToItemImage;
+	private String image;
 	
 	@Column(name ="line")
-	private String itemLine;
+	private String line;
 	
 	protected Product()
 	{
@@ -44,79 +44,81 @@ public class Product implements Serializable
 	{
 		return id;	
 	}
-	public void setId(long id)
+//	public void setId(long id)
+//	{
+//		this.id = id;
+//		
+//	}
+	public String getName()
 	{
-		this.id = id;
-		
-	}
-	public String getItemName()
-	{
-		return itemName;
-	}
-	
-	public void setItemName(String itemName)
-	{
-		this.itemName = itemName;
-	}
-	public String getItemDescription()
-	{
-		return itemDescription;
+		return name;
 	}
 	
-	public void setItemDescription(String itemDescription )
+	public void setName(String itemName)
 	{
-		this.itemDescription = itemDescription;
+		this.name = itemName;
+	}
+	public String getDescription()
+	{
+		return description;
 	}
 	
-	public void setItemPrice(long itemPrice)
+	public void setDescription(String itemDescription )
 	{
-			this.itemPrice= itemPrice;
+		this.description = itemDescription;
 	}
-	public long getItemPrice()
+	
+	public void setPrice(String itemPrice)
 	{
-		return itemPrice;
+			this.price= itemPrice;
 	}
-	public void setPathToImage(String pathToItemImage)
+	public String getPrice()
 	{
-		this.pathToItemImage = pathToItemImage;
+		return price;
+	}
+	public void setImage(String pathToItemImage)
+	{
+		this.image = pathToItemImage;
 		
 	}
-	public long getItemSize()
+	public String getSize()
 	{
-		return itemSize;
+		return size;
 	}
-	public void setItemSize(long itemSize)
+	public void setSize(String itemSize)
 	{
-		this.itemSize = itemSize;
+		this.size = itemSize;
 	}
-	public String getPathToImage()
+	public String getImage()
 	{
-		return pathToItemImage;
+		return image;
 		
 	}
 	
-	public String getItemLine()
+	public String getLine()
 	{
-		return itemLine;
+		return line;
 		
 	}
-	public void setItemLine(String itemLine)
+	public void setLine(String itemLine)
 	{
-		this.itemLine = itemLine;
+		this.line = itemLine;
 		
 	}
 	@Override
 	public String toString() {
-		return String.format("Product[id=%d, itemName='%s', itemDescription='%s',pathToItemImage='%s', itemSize='%d', itemPrice ='%d'  ]", id, itemName, itemDescription,pathToItemImage, itemSize, itemPrice);
+		return String.format("Product[id=%d, name='%s',price ='%d', description='%s',size='%d',image='%s', line='%s' ]", id, name,price,description,size,image,line);
 	}
-	public Product(String itemName,String itemDescription, String itemLine, String pathToItemImage, long itemSize,long itemPrice)
+	public Product(String itemName,String itemPrice ,String itemDescription,String itemSize,String pathToItemImage,String itemLine)
 	{
-		this.itemName = itemName;
-		this.itemDescription = itemDescription;
-		this.itemLine = itemLine;
-		this.pathToItemImage =pathToItemImage;
-		this.itemSize = itemSize;
-		this.itemPrice= itemPrice;
+		this.name = itemName;
+		this.price= itemPrice;
+		this.description = itemDescription;
+		this.size = itemSize;
+		this.image =pathToItemImage;
+		this.line = itemLine;
+		
+		
 		
 	}
 }

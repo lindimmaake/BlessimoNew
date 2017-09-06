@@ -1,0 +1,11 @@
+var app = angular.module('app',[]);
+	app.controller('postController',function($scope, $http,$location))
+	{
+		
+		$scope.submitForm =function()
+		{
+			
+		}
+		
+		
+	}
