@@ -1,0 +1,75 @@
+package com.example.BlessimoOnline.model;
+
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="product")
+public class Product {
+
+	@Id
+	@GeneratedValue(generator="PRODUCT_SEQ")
+	@SequenceGenerator(name="PRODUCT_SEQ",sequenceName="PRODUCT_SEQ", allocationSize=1)
+	Long productId;
+	
+	@Column(name="name")
+	String productName;
+	
+	@Column(name ="line")
+	String productLine;
+	
+	@Column(name ="price")
+	String productPrice;
+	
+	@Column(name="image")
+	String productImage;
+
+	public Long getProductId() {
+		return productId;
+	}
+
+	public void setProductId(Long storeId) {
+		this.productId = storeId;
+	}
+
+	
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getProductLine() {
+		return productLine;
+	}
+
+	public void setProductLine(String productLine) {
+		this.productLine = productLine;
+	}
+
+	
+	public String getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(String productPrice) {
+		this.productPrice = productPrice;
+	}
+
+	public String getProductImage() {
+		return productImage;
+	}
+
+	public void setProductImage(String productImage) {
+		this.productImage = productImage;
+	}
+
+}

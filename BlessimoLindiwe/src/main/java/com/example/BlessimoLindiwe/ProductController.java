@@ -23,7 +23,7 @@ public class ProductController
 	ProductRepository repository;
 	
 	
-	@RequestMapping(value = "/postitem", method = RequestMethod.POST)
+	@RequestMapping(value = "/postitem", method = RequestMethod.GET)
 	public void postItem(@RequestBody Product item) {
 		repository.save(new Product(item.getName(),item.getPrice(),item.getDescription(),item.getSize(),item.getImage(),item.getLine()));	
 	

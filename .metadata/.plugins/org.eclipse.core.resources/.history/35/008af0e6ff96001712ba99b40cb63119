@@ -1,0 +1,12 @@
+package com.example.BlessimoOnline;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BlessimoOnlineApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BlessimoOnlineApplication.class, args);
+	}
+}

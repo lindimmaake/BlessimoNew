@@ -1,0 +1,86 @@
+package com.example.BlessimoOnline.model;
+
+
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+//import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="product")
+public class Product implements Serializable {
+
+	//@Id
+	//@GeneratedValue(generator="PRODUCT_SEQ")
+	//@SequenceGenerator(name="PRODUCT_SEQ",sequenceName="PRODUCT_SEQ", allocationSize=1)
+	private static final long serialVersionUID = -3009157732242241606L;
+	@Id
+	@GeneratedValue(strategy =GenerationType.AUTO)
+	///private long id;
+	Long productId;
+	
+	@Column(name="name")
+	String productName;
+	
+	@Column(name ="line")
+	String productLine;
+	
+	@Column(name ="price")
+	String productPrice;
+	
+	@Column(name="image")
+	String productImage;
+
+	public Long getProductId() {
+		return productId;
+	}
+
+	public void setProductId(Long productId) {
+		this.productId = productId;
+	}
+
+	
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getProductLine() {
+		return productLine;
+	}
+
+	public void setProductLine(String productLine) {
+		this.productLine = productLine;
+	}
+
+	
+	public String getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(String productPrice) {
+		this.productPrice = productPrice;
+	}
+
+	public String getProductImage() {
+		return productImage;
+	}
+
+	public void setProductImage(String productImage) {
+		this.productImage = productImage;
+	}
+	public Product()
+	{
+		
+	}
+
+}

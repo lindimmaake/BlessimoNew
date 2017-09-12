@@ -4,7 +4,7 @@ var app = angular.module('app',[]);
 		
 		$scope.submitForm =function()
 		{
-			var url = $location.abUrl()+"postitem";
+			var url = $location.absUrl()+"postitem";
 			var config = 
 			{
 					headers: 
@@ -114,5 +114,3 @@ var app = angular.module('app',[]);
 
 		}
 	});
-	
-	

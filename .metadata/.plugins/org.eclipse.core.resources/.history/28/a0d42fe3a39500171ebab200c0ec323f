@@ -1,0 +1,5 @@
+package com.example.BlessimoOnline.config;
+
+public class WebConfig {
+
+}

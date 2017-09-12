@@ -1,0 +1,18 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/blessimo
+spring.datasource.username=hltuser
+spring.datasource.password=user123
+spring.jpa.generate-ddl=true
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=none
+server.error.whitelabel.enabled=false 
+# Naming strategy
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+spring.jpa.hibernate.naming.physical-strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+spring.jpa.properties.hibernate.id.new_generator_mappings=true
+# Allows Hibernate to generate SQL optimized for a particular DBMS
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.thymeleaf.check-template=true
+spring.thymeleaf.check-template-location=true
+spring.thymeleaf.enabled=true 
+spring.thymeleaf.prefix=classpath:/WEB-INF/view/
+spring.thymeleaf.suffix=.html

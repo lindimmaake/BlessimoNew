@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Product Management</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Product Management</h1>
+	<form action="#" th:action="@{/addproduct}" th:object="${product}"
+		method="post">
+		<table>
+			<!-- <tr>
+				<td>Product Id:</td>
+				<td><input type="text" th:field="*{productId}"  readonly="readonly" /></td>
+			</tr> -->
+			<tr>
+				<td>Product Name:</td>
+				<td><input type="text" th:field="*{productName}"
+					th:class="${#fields.hasErrors('productName')}? fieldError" /></td>
+			</tr>
+			<tr>
+				<td>Product line :</td>
+				<td><input type="text" th:field="*{productLine}" /></td>
+			</tr>
+			<tr>
+				<td>Product price:</td>
+				<td><input type="text" th:field="*{productPrice}" /></td>
+			</tr>
+			<tr>
+				<td>Product Image:</td>
+				<td><input type="text" th:field="*{productImage}" /></td>
+			</tr>
+			<tr align="center">
+				<td><input type="submit" value="Submit" /></td>
+				<td><input type="reset" value="Reset" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

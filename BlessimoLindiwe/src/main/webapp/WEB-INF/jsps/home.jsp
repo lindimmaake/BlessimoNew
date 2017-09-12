@@ -19,7 +19,7 @@
 
 		<div class="row">
 			<div ng-controller="postController" class="col-md-3">
-				<form name="productForm" ng-submit="submitForm()">
+				<form name="productForm" ng-submit="submitForm">
 					<label>ProductName</label>
 					<input type="text" name="name"	class="form-control" ng-model="name" />
 					<label>Price</label>
